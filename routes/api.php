@@ -5,6 +5,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OrderController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -15,3 +16,5 @@ Route::apiResource('categories', CategoryController::class);
 Route::apiResource('authors', AuthorController::class);
 
 Route::apiResource('books', BookController::class);
+
+route::apiResource('orders', OrderController::class);   
